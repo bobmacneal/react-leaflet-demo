@@ -5,7 +5,7 @@ a React web application.
 
 ![demo](https://github.com/bobmacneal/react-leaflet-demo/blob/main/screenshot.png?raw=true)
 
-## Setup / Run
+## Setup
 
 | shell command  | notes |
 |---|---|
