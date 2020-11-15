@@ -10,5 +10,6 @@ a React web application.
 | shell command  | notes |
 |---|---|
 | `git clone https://github.com/bobmacneal/react-leaflet-demo.git` | Clones repo in local directory |
+| `cd react-leaflet-demo` | Changes to _react-leaflet-demo_ directory |
 | `yarn`  | Installs dependencies |
 | `yarn start`  |  Starts application on port 3000 |
