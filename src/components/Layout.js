@@ -128,6 +128,11 @@ const Layout = ({children}) => {
           <Typography variant="h6" noWrap>
             React Leaflet Demo
           </Typography>
+          <div style={{display: 'flex', justifyContent: 'flex-end', flex: 1}}>
+            <Typography variant="caption" noWrap>
+              v{process.env.REACT_APP_VERSION}
+            </Typography>
+          </div>
         </Toolbar>
       </AppBar>
       <Drawer
