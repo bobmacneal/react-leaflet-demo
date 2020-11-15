@@ -1,5 +1,7 @@
 # react-leaflet-demo
-Displaying maps in a react application
+Demonstrates how to use the open-source map [leaflet](https://github.com/Leaflet/Leaflet)
+library and the [react-leaflet](https://react-leaflet.js.org/) components to create simple maps in
+a React web application.
 
 ## Setup / Run
 
