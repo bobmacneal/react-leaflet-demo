@@ -25,7 +25,10 @@ const QuickMap = ({location, zoom}) => {
 }
 
 QuickMap.propTypes = {
-  location: PropTypes.any.isRequired,
+  location:  PropTypes.shape({
+    lat: PropTypes.number,
+    lng: PropTypes.number,
+  }),
   zoom: PropTypes.number.isRequired,
 }
 
