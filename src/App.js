@@ -1,7 +1,7 @@
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import Routes from './pages/Routes';
-import './App.css';
+import './App.css'
+import { BrowserRouter } from 'react-router-dom'
+import React from 'react'
+import Routes from './pages/Routes'
 
 export default function App() {
   return (
@@ -10,5 +10,5 @@ export default function App() {
         <Routes />
       </div>
     </BrowserRouter>
-  );
+  )
 }

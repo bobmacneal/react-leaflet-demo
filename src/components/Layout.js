@@ -11,23 +11,24 @@ import {
   Toolbar,
   Tooltip,
   Typography,
-}from '@material-ui/core';
+}from '@material-ui/core'
+import {
+  AppRoutes,
+  NAVIGATION_DRAWER_WIDTH
+} from '../constants'
 import {
   makeStyles,
   useTheme
-} from '@material-ui/core/styles';
-import React from 'react';
-import {AppRoutes} from '../constants'
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import clsx from 'clsx';
-import ExploreIcon from '@material-ui/icons/Explore';
-import HomeIcon from '@material-ui/icons/Home';
+} from '@material-ui/core/styles'
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import ChevronRightIcon from '@material-ui/icons/ChevronRight'
+import clsx from 'clsx'
+import ExploreIcon from '@material-ui/icons/Explore'
+import HomeIcon from '@material-ui/icons/Home'
 import {Link} from 'react-router-dom'
-import MenuIcon from '@material-ui/icons/Menu';
-import PropTypes from 'prop-types';
-
-const drawerWidth = 240;
+import MenuIcon from '@material-ui/icons/Menu'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -41,8 +42,8 @@ const useStyles = makeStyles((theme) => ({
     }),
   },
   appBarShift: {
-    marginLeft: drawerWidth,
-    width: `calc(100% - ${drawerWidth}px)`,
+    marginLeft: NAVIGATION_DRAWER_WIDTH,
+    width: `calc(100% - ${NAVIGATION_DRAWER_WIDTH}px)`,
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -55,12 +56,12 @@ const useStyles = makeStyles((theme) => ({
     display: 'none',
   },
   drawer: {
-    width: drawerWidth,
+    width: NAVIGATION_DRAWER_WIDTH,
     flexShrink: 0,
     whiteSpace: 'nowrap',
   },
   drawerOpen: {
-    width: drawerWidth,
+    width: NAVIGATION_DRAWER_WIDTH,
     transition: theme.transitions.create('width', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -89,54 +90,59 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     padding: theme.spacing(3),
   },
-}));
+}))
 
 const Layout = ({children}) => {
-  const classes = useStyles();
-  const theme = useTheme();
-  const [open, setOpen] = React.useState(false);
+  const classes = useStyles()
+  const theme = useTheme()
+  const [open, setOpen] = React.useState(false)
 
   const handleDrawerOpen = () => {
-    setOpen(true);
-  };
+    setOpen(true)
+  }
 
   const handleDrawerClose = () => {
-    setOpen(false);
-  };
+    setOpen(false)
+  }
 
   return (
     <div className={classes.root}>
       <CssBaseline />
       <AppBar
-        position="fixed"
         className={clsx(classes.appBar, {
           [classes.appBarShift]: open,
         })}
+        position="fixed"
       >
         <Toolbar>
           <IconButton
-            color="inherit"
             aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
             className={clsx(classes.menuButton, {
               [classes.hide]: open,
             })}
+            color="inherit"
+            edge="start"
+            onClick={handleDrawerOpen}
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
+          <Typography
+            noWrap
+            variant="h6"
+          >
             React Leaflet Demo
           </Typography>
           <div style={{display: 'flex', justifyContent: 'flex-end', flex: 1}}>
-            <Typography variant="caption" noWrap>
+            <Typography
+              noWrap
+              variant="caption"
+            >
               v{process.env.REACT_APP_VERSION}
             </Typography>
           </div>
         </Toolbar>
       </AppBar>
       <Drawer
-        variant="permanent"
         className={clsx(classes.drawer, {
           [classes.drawerOpen]: open,
           [classes.drawerClose]: !open,
@@ -147,6 +153,7 @@ const Layout = ({children}) => {
             [classes.drawerClose]: !open,
           }),
         }}
+        variant="permanent"
       >
         <div className={classes.toolbar}>
           <IconButton onClick={handleDrawerClose}>
@@ -187,7 +194,7 @@ const Layout = ({children}) => {
         {children}
       </main>
     </div>
-  );
+  )
 }
 
 Layout.propTypes = {

@@ -4,10 +4,7 @@ export const AppRoutes = {
   MAPS: '/maps',
 }
 
-export const OPEN_STREET_MAP_ATTRIBUTION
-  = "&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors"
-
-export const OPEN_STREET_MAP_URL = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+export const NAVIGATION_DRAWER_WIDTH = 200
 
 export const Locations = {
   BERLIN: {
@@ -47,4 +44,8 @@ export const Locations = {
     },
 }
 
+export const OPEN_STREET_MAP_ATTRIBUTION
+  = '&copy; <a href=&quot;http://osm.org/copyright&quot;>OpenStreetMap</a> contributors'
+
+export const OPEN_STREET_MAP_URL = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 

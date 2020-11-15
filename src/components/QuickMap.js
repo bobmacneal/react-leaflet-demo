@@ -1,13 +1,14 @@
+import 'leaflet/dist/leaflet.css'
 import {
   MapContainer,
   TileLayer,
-} from 'react-leaflet';
+} from 'react-leaflet'
 import {
   OPEN_STREET_MAP_ATTRIBUTION,
   OPEN_STREET_MAP_URL,
 } from '../constants'
-import 'leaflet/dist/leaflet.css';
-import React from 'react';
+import PropTypes from 'prop-types'
+import React from 'react'
 
 const QuickMap = ({location, zoom}) => {
   return (
@@ -16,11 +17,16 @@ const QuickMap = ({location, zoom}) => {
       zoom={zoom}
     >
       <TileLayer
-        url={OPEN_STREET_MAP_URL}
         attribution={OPEN_STREET_MAP_ATTRIBUTION}
+        url={OPEN_STREET_MAP_URL}
       />
     </MapContainer>
-  );
+  )
 }
 
-export default QuickMap;
+QuickMap.propTypes = {
+  location: PropTypes.any.isRequired,
+  zoom: PropTypes.number.isRequired,
+}
+
+export default QuickMap

@@ -8,3 +8,6 @@ Displaying maps in a react application
 | `yarn`  | Installs/refreshes node package dependencies |---|
 | `yarn start`  |  Starts react application | runs locally on port 3000 |
 
+
+![demo](https://github.com/bobmacneal/react-leaflet-demo/blob/main/screenshot.png?raw=true)
+
