@@ -7,7 +7,8 @@ a React web application.
 
 ## Setup / Run
 
-| command script  | description  | notes |
-|---|---|---|
-| `yarn`  | Installs/refreshes node package dependencies |---|
-| `yarn start`  |  Starts react application | runs locally on port 3000 |
+| shell command  | notes |
+|---|---|
+| `git clone https://github.com/bobmacneal/react-leaflet-demo.git` | Clones repo in local directory |
+| `yarn`  | Installs dependencies |
+| `yarn start`  |  Starts application on port 3000 |
