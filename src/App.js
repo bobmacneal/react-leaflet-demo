@@ -6,7 +6,7 @@ import Routes from './pages/Routes'
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div>
         <Routes />
       </div>
     </BrowserRouter>
